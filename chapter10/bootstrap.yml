@@ -1,0 +1,45 @@
+---
+- hosts: all
+  become: true
+  pre_tasks:
+
+  - name: Install Update (Centos)
+    tags: always
+    dnf:
+      update_only: yes
+      update_cache: yes
+    when: ansible_distribution == "Centos"
+
+  - name: Install Update (Ubuntu)
+    tags: always
+    apt:
+      upgrade: dist
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Create a mgelvoleo User
+    tags: always
+    user:
+       name: mgelvoleo
+       groups: root
+
+  - name: Add SSH key for mgelvoleo
+    tags: always
+    authorized_key:
+      user: mgelvoleo
+      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKvhJYVSTiIeWlO9KG8YMP38P9vKbdU82cGax2jq8T1I ansible"
+  
+  - name: Add Sudoers
+    tags: always
+    copy:
+      src: sudoer_mgelvoleo
+      dest: /etc/sudoers.d/mgelvoleo
+      owner: root
+      group: root
+      mode: 0440
+
+    
