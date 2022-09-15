@@ -25,7 +25,7 @@
     tags: always
     authorized_key:
       user: mgelvoleo
-      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKvhJYVSTiIeWlO9KG8YMP38P9vKbdU82cGax2jq8T1I ansible"
+      key: "ssh-ed25519 xxxxxxxxxxxxxxxxxxxxxxxx ansible"
   
 
 - hosts: webservers
