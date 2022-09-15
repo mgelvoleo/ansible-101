@@ -47,6 +47,16 @@ Vagrant.configure("2") do |config|
         server3.memory = 512
     end
   end
+
+  #server4
+  #config.vm.define "server4" do |server4|
+  #  server4.vm.hostname = "server4"
+  #  server4.vm.network :private_network, ip: "192.168.60.14"
+  #  server4.vm.box = "bento/centos-stream-8"
+  #  server4.vm.provider "virtualbox" do |server4|
+  #      server4.memory = 512
+  #  end
+  #end
  
 
 end

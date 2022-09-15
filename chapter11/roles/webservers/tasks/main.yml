@@ -1,0 +1,51 @@
+- name: Install apache and php for Ubuntu Package
+  tags: apache, apache2, ubuntu
+  apt:
+    name: 
+      - apache2
+      - libapache2-mod-php
+    state: latest
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install apache2 and php for Centos Package
+  tags: apache, centos, httpd
+  dnf:
+    name: 
+      - httpd
+      - php
+    state: latest
+  when: ansible_distribution == "CentOS"
+
+- name: Start httpd (CentOS)
+  tags: centos, httpd, apache
+  service:
+    name: httpd
+    state: started
+    enabled: yes
+  when: ansible_distribution == "CentOS"
+
+- name: Sample Copy html file for site
+  tags: apache, apache2, httpd
+  copy:
+    src: default_site.html
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Rename the email of the admin for apache
+  tags: apache, ubuntu, httpd
+  lineinfile:
+    path: /etc/apache2/apache2.conf
+    regexp: '^#ServerRoot'
+    line: "ServerName www.srv.world"
+  when: ansible_distribution == "Ubuntu"
+  register: apache2
+
+- name: Restart Apache (Ubuntu)
+  tags: apache, ubuntu, httpd
+  service:
+    name: apache2
+    state: reload
+  when:  apache2.changed
+
