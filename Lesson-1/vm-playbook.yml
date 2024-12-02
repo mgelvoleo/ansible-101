@@ -1,0 +1,6 @@
+---
+- name: Lesson One
+  hosts: all
+  remote_user: mgelvoleo
+  roles:
+    - webserver
