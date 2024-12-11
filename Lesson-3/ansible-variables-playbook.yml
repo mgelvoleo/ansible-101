@@ -1,0 +1,52 @@
+---
+- name: Example Ansible playbook for Handlers
+  hosts: all
+  become: yes
+  remote_user: ubuntu
+  roles:
+    - custom-role
+
+  vars:
+    # 1. String Variable
+    main_playbook_variable: "foo"
+
+    # 2. Boolean Variable
+    is_enabled: false
+
+    # 3. List Variable
+    language:
+      - python
+      - java
+      - perl
+
+    # 4. Dictionary Variable
+    language_version:
+      python: 0.5
+      java: 0.25
+      perl: 0.75
+
+  tasks:
+    - name: String Variable from - main_playbook_variable
+      debug:
+        var: main_playbook_variable 
+      tags:
+        - string_var
+    
+    - name: Boolean variable
+      debug:
+        msg: "Variable is true"
+      when: is_enabled
+      tags:
+        - boolean_var
+
+    - name: List variable - Print list of computer language
+      debug:
+        var: language
+      tags:
+        - list_var
+
+    - name: List variable - Reference individual item in list
+      debug:
+       var: fruits[0]
+      tags:
+        - individual_item 
