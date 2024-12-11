@@ -45,7 +45,7 @@
       tags:
         - list_var
 
-    - name: List variable - Reference individual item in list
+    - name: List variable - Reference individual item in listd
       debug:
        var: fruits[0]
       tags:
