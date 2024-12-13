@@ -47,6 +47,12 @@
 
     - name: List variable - Reference individual item in listd
       debug:
-       var: fruits[0]
+       var: language_version[0]
       tags:
         - individual_item 
+
+    - name: Dictionary Variable - Accessing individual specific fields
+      debug:
+        var: language_version.python
+
+    
