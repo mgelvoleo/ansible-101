@@ -16,10 +16,6 @@ ansible-playbook --inventory inventory/hosts ansible-variables-playbook.yml --ex
 ansible-playbook --inventory inventory/hosts ansible-variables-playbook.yml --extra-vars "@my-vars.yml"
 ```
 
-```
-ansible-playbook playbook.yml  --extra-vars '{"version":"1.0"}' 
-
-```
 
 ## ## RUN playb book with tags
 ```
