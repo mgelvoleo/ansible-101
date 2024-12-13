@@ -19,5 +19,5 @@ ansible-playbook --inventory inventory/hosts ansible-variables-playbook.yml --ex
 
 ## ## RUN playb book with tags
 ```
-ansible-playbook playbook.yml --tags string_var
+ansible-playbook --inventory inventory/hosts ansible-variables-playbook.yml --tags string_var
 ```
