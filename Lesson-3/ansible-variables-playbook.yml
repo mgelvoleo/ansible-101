@@ -14,15 +14,15 @@
     is_enabled: true
 
     # 3. List Variable
-    language:
-      - python
-      - java
-      - perl
+    fruits:
+      - apple
+      - banana
+      - orange
 
-    language_version:
-      python: 0.5
-      java: 0.25
-      perl: 0.75
+    fruit_prices:
+      apple: 0.5
+      banana: 0.25
+      orange: 0.75
     
     
 
