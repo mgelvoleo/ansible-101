@@ -57,6 +57,10 @@
      #Register the price of a apple to new variable - apple_price
      register: apple_price_as_registered_var
 
+   - name: Print the value of register variable
+     debug:
+       var: apple_price_as_registered_var.stdout
+
    
     
     
