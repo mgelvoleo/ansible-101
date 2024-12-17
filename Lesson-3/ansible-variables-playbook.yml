@@ -7,15 +7,12 @@
     - custom-role
 
   vars:
-    # 1. String Variable
-    main_playbook_variable: "foo"
+    
     
     
 
   tasks:
-    - name: String Variable from - main_playbook_variable
-      debug:
-        var: main_playbook_variable 
+    
 
     
     
