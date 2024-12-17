@@ -10,8 +10,7 @@
     # 1. String Variable
     main_playbook_variable: "foo"
     
-    # 2. Boolean Variable
-    is_enabled: false
+    
 
     
 
@@ -20,9 +19,7 @@
       debug:
         var: main_playbook_variable 
 
-    - name: Boolean testing
-      debug:
-        msg: "variable true"
+    
     
     
     
