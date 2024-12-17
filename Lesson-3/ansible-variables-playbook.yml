@@ -11,7 +11,7 @@
     main_playbook_variable: "foo"
 
     # 2. Boolean Variable
-    is_enabled: false
+    is_enabled: true
     
     
 
