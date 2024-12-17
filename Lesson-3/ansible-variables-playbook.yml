@@ -20,10 +20,10 @@
      debug:
        var: main_playbook_variable
 
-  - name: Boolean variable
-    debug:
-      msg: "Variable is true"
-    when: is_enabled
+   - name: Boolean variable
+     debug:
+       msg: "Variable is true"
+     when: is_enabled
 
     
     
