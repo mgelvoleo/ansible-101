@@ -32,8 +32,8 @@
      when: is_enabled
 
    - name: List variable - Print list of computer language
-      debug:
-        var: language
+     debug:
+       var: language
     
     
     
