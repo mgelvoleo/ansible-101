@@ -74,6 +74,11 @@
       debug:
         var: fruit_prices[fruit_basket[0].fruits[0]]
 
+    - name: Dictionary Variable - Accessing all dictionary variable
+      debug:
+        var: fruit_prices
+
+
 
 
 

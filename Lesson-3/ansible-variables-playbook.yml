@@ -42,7 +42,12 @@
 
    - name: List variable - Reference individual item in list
      debug:
-       var: fruits[0]
+       var: fruits[1]
+
+   - name: Dictionary Variable - Accessing all dictionary variable
+     debug:
+       var: fruit_prices
+
    
     
     
