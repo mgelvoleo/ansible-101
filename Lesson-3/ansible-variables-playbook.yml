@@ -23,6 +23,7 @@
   - name: Boolean variable
     debug:
       msg: "Variable is true"
+    when: is_enabled
 
     
     
