@@ -36,13 +36,13 @@
        msg: "Variable is true"
      when: is_enabled
 
-   - name: List variable - Print list of computer language
+   - name: List variable - Print list of fruits
      debug:
-       var: language
+       var: fruit
 
    - name: List variable - Reference individual item in list
      debug:
-       var: language_version[0]
+       var: fruits[0]
    
     
     
