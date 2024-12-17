@@ -18,6 +18,11 @@
       - python
       - java
       - perl
+
+    language_version:
+      python: 0.5
+      java: 0.25
+      perl: 0.75
     
     
 
@@ -34,6 +39,11 @@
    - name: List variable - Print list of computer language
      debug:
        var: language
+
+   - name: List variable - Reference individual item in list
+     debug:
+       var: language_version[0]
+   
     
     
     
