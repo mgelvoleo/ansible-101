@@ -12,6 +12,12 @@
 
     # 2. Boolean Variable
     is_enabled: true
+
+    # 3. List Variable
+    language:
+      - python
+      - java
+      - perl
     
     
 
@@ -25,6 +31,9 @@
        msg: "Variable is true"
      when: is_enabled
 
+   - name: List variable - Print list of computer language
+      debug:
+        var: language
     
     
     
