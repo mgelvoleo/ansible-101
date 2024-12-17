@@ -78,6 +78,9 @@
       debug:
         var: fruit_prices
 
+    - name: Dictionary Variable - Accessing individual specific fields
+      debug:
+        var: fruit_prices.apple
 
 
 
