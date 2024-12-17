@@ -2,8 +2,9 @@
 ## Variable to discuss
 
 # 2. Boolean Variable
-    ```is_enabled: false
-    ```
+    
+    is_enabled: false
+    
 
 # 3. List Variable
     ```
@@ -21,6 +22,7 @@
     ```
 
  # 5. Referencing nested variable
+    
     ```
     fruit_basket:
       - name: John
