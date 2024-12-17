@@ -52,6 +52,11 @@
      debug:
        var: fruit_prices.apple
 
+   - name: Get the price of an apple
+      command: echo "{{ fruit_prices['apple'] }}"
+      #Register the price of a apple to new variable - apple_price
+      register: apple_price_as_registered_var
+
    
     
     
