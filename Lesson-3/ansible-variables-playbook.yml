@@ -12,8 +12,6 @@
     
     
 
-    
-
   tasks:
     - name: String Variable from - main_playbook_variable
       debug:
