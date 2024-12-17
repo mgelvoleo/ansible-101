@@ -39,8 +39,8 @@
   # 6. Variable from the my-vars.yml
   
   
-  vars_files:
-    - my-vars.yml
+    vars_files:
+        - my-vars.yml
  
 
 
