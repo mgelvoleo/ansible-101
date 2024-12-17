@@ -38,7 +38,7 @@
 
    - name: List variable - Print list of fruits
      debug:
-       var: fruit
+       var: fruits
 
    - name: List variable - Reference individual item in list
      debug:
