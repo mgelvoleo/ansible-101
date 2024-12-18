@@ -10,7 +10,7 @@
     # 1. String Variable
     main_playbook_variable: "foo"
 
-    is_enabled: false
+    is_enabled: true
 
     
     
