@@ -28,7 +28,7 @@
   tasks:
    - name: Display
      debug:
-       var: fruit_prices[1]
+       var: fruit_prices.banana
    
 
    
