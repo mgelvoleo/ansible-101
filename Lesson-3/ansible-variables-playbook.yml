@@ -12,14 +12,18 @@
 
     is_enabled: true
 
+    fruits:
+      - apple
+      - banana
+      - orange
+
     
     
 
   tasks:
-   - name: String Variable from - main_playbook_variable
+   - name: Display
      debug:
-       msg: "Variable is true"
-     when: is_enabled
+       var: fruits
    
 
    
