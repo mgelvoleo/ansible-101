@@ -57,22 +57,13 @@
       when: is_enabled
      
 
-    - name: List variable - Print list of computer language
+     - name: List variable - Print list of fruits
       debug:
-        var: language
-     
+        var: fruits
 
     - name: List variable - Reference individual item in list
       debug:
-       var: language_version[0]
-     
-    - name: Dictionary Variable - Accessing individual specific fields
-      debug:
-        var: language_version.python
-
-    - name: Get the value of apple from the nested variable
-      debug:
-        var: fruit_prices[fruit_basket[0].fruits[0]]
+        var: fruits[0]
 
     - name: Dictionary Variable - Accessing all dictionary variable
       debug:
