@@ -10,19 +10,6 @@
     # 1. String Variable
     main_playbook_variable: "foo"
 
-    # 2. Boolean Variable
-    is_enabled: true
-
-    # 3. List Variable
-    fruits:
-      - apple
-      - banana
-      - orange
-
-    fruit_prices:
-      apple: 0.5
-      banana: 0.25
-      orange: 0.75
     
     
 
@@ -31,35 +18,7 @@
      debug:
        var: main_playbook_variable
 
-   - name: Boolean variable
-     debug:
-       msg: "Variable is true"
-     when: is_enabled
-
-   - name: List variable - Print list of fruits
-     debug:
-       var: fruits
-
-   - name: List variable - Reference individual item in list
-     debug:
-       var: fruits[1]
-
-   - name: Dictionary Variable - Accessing all dictionary variable
-     debug:
-       var: fruit_prices
-
-   - name: Dictionary Variable - Accessing individual specific fields
-     debug:
-       var: fruit_prices.apple
-
-   - name: Get the price of an apple
-     command: echo "{{ fruit_prices['apple'] }}"
-     #Register the price of a apple to new variable - apple_price
-     register: apple_price_as_registered_var
-
-   - name: Print the value of register variable
-     debug:
-       var: apple_price_as_registered_var.stdout
+   
 
    
     
