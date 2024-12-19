@@ -49,20 +49,24 @@
 
     - name: String Variable from - main_playbook_variable
       debug:
-        var: main_playbook_variable 
+        var: main_playbook_variable
 
     - name: Boolean variable
       debug:
         msg: "Variable is true"
       when: is_enabled
-     
 
+<<<<<<< HEAD
+    - name: List variable - Print list of fruits
+=======
      - name: List variable - Print list of fruits
+>>>>>>> de993963775d415156d769d7a959be98b68eba51
       debug:
         var: fruits
 
     - name: List variable - Reference individual item in list
       debug:
+<<<<<<< HEAD
         var: fruits[0]
 
     - name: Dictionary Variable - Accessing all dictionary variable
@@ -72,6 +76,46 @@
     - name: Dictionary Variable - Accessing individual specific fields
       debug:
         var: fruit_prices.apple
+=======
+        var: fruits[0]
+>>>>>>> de993963775d415156d769d7a959be98b68eba51
+
+<<<<<<< HEAD
+    - name: Get the price of an apple
+      command: echo "{{ fruit_prices['apple'] }}"
+      #Register the price of a apple to new variable - apple_price
+      register: apple_price_as_registered_var
+
+    - name: Print the value of register variable
+      debug:
+        var: apple_price_as_registered_var.stdout
+
+    - name: Get the value of apple from the nested variable
+      debug:
+        var: fruit_prices[fruit_basket[0].fruits[0]]
+
+    # Jinja 2 filter on variables
+    - name: Using Jinja 2 filters on variables
+=======
+    - name: Dictionary Variable - Accessing all dictionary variable
+>>>>>>> de993963775d415156d769d7a959be98b68eba51
+      debug:
+        var: fruit_prices.keys() | list | map('upper') | list
+
+    # Accessing variable inside playbook from my-vars.yml
+    - name: Get the value of variable from my-vars.yml
+      debug:
+        var: vars_from_my_vars_yml
+
+    #Defining and accessing the variable at RunTime
+    - name: Get the value from run time
+      debug:
+        var: version
+
+    #Defining and accessing the variable at RunTime
+    - name: Print the value of variable when var file is passed at run time
+      debug:
+        var: other_variable
 
 
 
