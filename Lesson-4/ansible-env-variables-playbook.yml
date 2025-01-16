@@ -18,7 +18,7 @@
      ansible.builtin.command: "echo $EXAMPLE_LEVEL_VAR"
 
    - name: Display both variable declare
-     ansible.builtin.command: "echo $EXAMPLE EXAMPLE_LEVEL_VAR "
+     ansible.builtin.command: "echo $EXAMPLE $EXAMPLE_LEVEL_VAR "
 
    
     
