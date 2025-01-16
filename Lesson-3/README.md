@@ -56,17 +56,12 @@
         msg: "Variable is true"
       when: is_enabled
 
-<<<<<<< HEAD
     - name: List variable - Print list of fruits
-=======
-     - name: List variable - Print list of fruits
->>>>>>> de993963775d415156d769d7a959be98b68eba51
       debug:
         var: fruits
 
     - name: List variable - Reference individual item in list
       debug:
-<<<<<<< HEAD
         var: fruits[0]
 
     - name: Dictionary Variable - Accessing all dictionary variable
@@ -76,11 +71,7 @@
     - name: Dictionary Variable - Accessing individual specific fields
       debug:
         var: fruit_prices.apple
-=======
-        var: fruits[0]
->>>>>>> de993963775d415156d769d7a959be98b68eba51
 
-<<<<<<< HEAD
     - name: Get the price of an apple
       command: echo "{{ fruit_prices['apple'] }}"
       #Register the price of a apple to new variable - apple_price
@@ -96,9 +87,6 @@
 
     # Jinja 2 filter on variables
     - name: Using Jinja 2 filters on variables
-=======
-    - name: Dictionary Variable - Accessing all dictionary variable
->>>>>>> de993963775d415156d769d7a959be98b68eba51
       debug:
         var: fruit_prices.keys() | list | map('upper') | list
 
