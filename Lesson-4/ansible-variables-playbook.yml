@@ -3,8 +3,7 @@
   hosts: all
   become: yes
   remote_user: mgelvoleo
-  roles:
-    - custom-role
+ 
 
   vars:
     # 1. String Variable
