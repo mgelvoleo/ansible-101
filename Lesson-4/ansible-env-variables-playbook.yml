@@ -6,8 +6,8 @@
   roles:
     - custom-role
 
-environment:
-  EXAMPLE: "Foo bar"
+  environment:
+    EXAMPLE: "Foo bar"
 
   tasks:
    - name: Environtment variable at Playbook Level
