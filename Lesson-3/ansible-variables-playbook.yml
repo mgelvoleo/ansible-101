@@ -33,7 +33,7 @@
 
    - name: Print the value of register variable
      debug:
-       var: apple_price_as_registered_var.stdout
+       var: apple_price_as_registered_var.stdouts
 
     
    
