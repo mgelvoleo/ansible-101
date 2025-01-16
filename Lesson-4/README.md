@@ -24,7 +24,7 @@
 ## RUN Playbook
 
 ```
-ansible-playbook --inventory inventory/hosts ansible-variables-playbook.yml
+ansible-playbook --inventory inventory/hosts ansible-env-variables-playbook.yml
 
 ```
 
