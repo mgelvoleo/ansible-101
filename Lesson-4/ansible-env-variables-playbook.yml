@@ -12,6 +12,11 @@
    - name: Environtment variable at Playbook Level
      ansible.builtin.command: "echo $EXAMPLE"
 
+   - name: Environment var for only task level
+     environment:
+       EXAMPLE_LEVEL_VAR: "Hello VARIABLE"
+     ansible.builtin.command: "echo $EXAMPLE_LEVEL_VAR"
+
    
 
    
