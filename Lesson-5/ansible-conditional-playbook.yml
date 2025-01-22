@@ -4,4 +4,4 @@
   become: yes
   remote_user: mgelvoleo
   roles:
-    - custom-role
+    - tasks
