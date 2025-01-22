@@ -1,5 +1,6 @@
 ## Files under role/tasks main.yml
 
+```
 ---
 ## Boolean Conditional check for installing Apache
 - name: Install Apache web server
@@ -46,14 +47,15 @@
     #var: ansible_facts['kernel_version']
     #var: ansible_facts
   when: ansible_facts['os_family'] == "Debian"
-
+```
 
 
 ## Files under var/tasks main.yml
 
+```
 ---
 install_apache_flag: false
-
+```
 
 
 
@@ -62,7 +64,7 @@ install_apache_flag: false
 ## RUN Playbook
 
 ```
-ansible-playbook --inventory inventory/hosts ansible-env-variables-playbook.yml
+ansible-playbook --inventory inventory/hosts ansible-conditional-playbook.yml
 
 ```
 
