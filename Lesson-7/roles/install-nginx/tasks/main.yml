@@ -1,0 +1,30 @@
+---
+- name: Install Nginx web server
+  become: yes
+  apt:
+    name: nginx
+    state: latest
+    update_cache: yes
+
+- name: Generate Nginx configuration file
+  template:
+    src: myconfig.j2
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: '0644'
+  vars:
+    server_port: 9090
+  notify: restart nginx  # This triggers the handler
+
+- name: Start Nginx service
+  become: yes
+  service:
+    name: nginx
+    state: started
+
+handlers:
+  - name: restart nginx
+    service:
+      name: nginx
+      state: restarted  # REQUIRED: Added state parameter

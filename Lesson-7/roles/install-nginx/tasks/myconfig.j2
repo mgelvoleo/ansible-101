@@ -1,0 +1,9 @@
+# myconfig.j2 (Nginx-compatible template)
+server {
+    listen {{ server_port }};
+    server_name localhost;
+    location / {
+        root /var/www/html;
+        index index.html;
+    }
+}
