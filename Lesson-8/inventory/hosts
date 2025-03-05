@@ -1,0 +1,11 @@
+[blue]
+# Server-1
+webserver-1 ansible_ssh_private_key_file=/home/mgelvoleo/.ssh/controller
+# Server-2
+webserver-2 ansible_ssh_private_key_file=/home/mgelvoleo/.ssh/controller
+
+[green]
+# Server-1
+webserver-3 ansible_ssh_private_key_file=/home/mgelvoleo/.ssh/controller
+# Server-2
+webserver-4 ansible_ssh_private_key_file=/home/mgelvoleo/.ssh/controller
