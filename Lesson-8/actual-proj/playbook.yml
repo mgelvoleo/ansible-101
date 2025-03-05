@@ -1,0 +1,10 @@
+---
+- name: Blue/Green Deployment
+  hosts: "{{ target_group | default('blue') }}"
+  become: yes
+  remote_user: ubuntu
+  vars:
+    deployment_color: "{{ 'blue' if 'blue' in group_names else 'green' }}"
+    
+  roles:
+    - webserver
