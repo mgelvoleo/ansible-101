@@ -1,0 +1,8 @@
+# ----------------------
+    # 2. Custom Failure Conditions (failed_when)
+    # ----------------------
+    - name: Check if a file exists (custom failure logic)
+      stat:
+        path: "{{ test_file }}"
+      register: file_stat
+      failed_when: "not file_stat.stat.exists"  # Fail only if file doesn't exist

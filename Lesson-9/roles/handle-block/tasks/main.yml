@@ -1,0 +1,24 @@
+# ----------------------
+    # 4. Handle Errors with Blocks (block + rescue)
+    # ----------------------
+    - name: Demonstrate block/rescue error recovery
+      block:
+        - name: Attempt to delete a non-existent file (will fail)
+          file:
+            path: /tmp/non_existent_file.txt
+            state: absent
+
+      rescue:  # Runs ONLY if the block fails
+        - name: Handle deletion failure
+          debug:
+            msg: "Deletion failed! Creating the file instead."
+          
+        - name: Create the missing file
+          file:
+            path: /tmp/non_existent_file.txt
+            state: touch
+
+      always:  # Runs regardless of success/failure
+        - name: Cleanup task (always runs)
+          debug:
+            msg: "Block execution completed."

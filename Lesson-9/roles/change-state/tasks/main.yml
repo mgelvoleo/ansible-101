@@ -1,0 +1,8 @@
+# ----------------------
+    # 3. Control "Changed" State (changed_when)
+    # ----------------------
+    - name: Create a file (suppress "changed" status)
+      file:
+        path: "{{ test_file }}"
+        state: touch
+      changed_when: false  # Always report as "ok" even if file is created

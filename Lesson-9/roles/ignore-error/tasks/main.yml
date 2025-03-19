@@ -1,0 +1,7 @@
+# ----------------------
+    # 1. Ignore Errors
+    # ----------------------
+    - name: Ignore errors in a task (non-critical failure)
+      command: ls /non/existent/dir  # This command will fail
+      ignore_errors: yes  # Playbook continues even if task fails
+      changed_when: false  # Mark task as "not changed" to avoid confusion

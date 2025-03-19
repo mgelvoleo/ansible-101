@@ -1,0 +1,33 @@
+---
+- name: Ansible Error Handling Demo for Beginners
+  hosts: all
+  become: yes
+  remote_user: mgelvoleo
+  gather_facts: no
+  roles:
+    - ignore-error
+    - custom-failure
+    - change-state
+    - handle-block
+
+  vars:
+    test_file: "/tmp/test_file.txt"
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+
+  
